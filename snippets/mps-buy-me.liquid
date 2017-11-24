@@ -1,0 +1,26 @@
+{% comment %}
+Do NOT change this file.
+{% endcomment %}
+
+<script>
+	if((typeof jQuery === "undefined") || (parseInt(jQuery.fn.jquery) === 1 && parseFloat(jQuery.fn.jquery.replace(/^1\./,"")) < 9.1)) {
+	   var script = document.createElement('script');
+	   script.type = "text/javascript";
+	   script.src = "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js";
+	   document.getElementsByTagName('head')[0].appendChild(script);
+	}
+	window.bm_product = [];
+	{% if product %}
+		try{
+			jQuery.getJSON(window.location.href, function(respProduct) {
+			  window.bm_product = respProduct;
+			});
+		}
+		catch(err){
+		}
+	{% endif %}
+</script>
+
+<!-- Main Script DON'T REMOVE THIS START -->
+<script async src="https://buy-me.makeprosimp.com/app/js/app.js?shop=better-product-page.myshopify.com&key=888f1476f24948f9809949517a56c228"></script>
+<!-- Main Script DON'T REMOVE THIS END -->
